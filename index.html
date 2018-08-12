@@ -5,8 +5,182 @@
     <title>HTML Academy: Девайс</title>
   </head>
   <body>
-
-    <p>Репозиторий создан для обучения на интенсивном онлайн‑курсе «<a href="https://htmlacademy.ru/intensive/htmlcss">Профессиональный HTML и CSS, уровень 1</a>».</p>
-
+    <header>
+      <a class="logo logo--main">DEVACE</a>
+      <nav class="menu">
+        <form class="menu__search">
+          <label for="search">Поиск</label>
+          <input type="search" id="search" name="search" placeholder="Поиск по сайту">
+        </form>
+        <ul class="menu__user">
+          <li><a href="#">Войти</a></li>
+        </ul>
+        <ul class="menu__card">
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+        <ul class="menu__site">
+          <li><a href="#">Каталог товаров</a>
+            <ul class="menu__catalog">
+              <li><a href="#">Виртуальная реальность</a></li>
+              <li><a href="#">Моноподы для селфи</a></li>
+              <li><a href="#">Экшн-камеры</a></li>
+              <li><a href="#">Фитнес-браслеты</a></li>
+              <li><a href="#">Умные часы</a></li>
+              <li><a href="#">Квадрокоптеры</a></li>
+            </ul>
+          </li>
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <h1 class="invisible-header">DEVACE</h1>
+      <section class="slider">
+        <h2 class="invisible-header">Популярные товары</h2>
+        <input id="slide01" type="radio" name="slider" value="slide-1" checked>
+        <input id="slide02" type="radio" name="slider" value="slide-2">
+        <input id="slide03" type="radio" name="slider" value="slide-3">
+        <article class="slide slide-1">
+          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
+          <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
+          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <a class="slide__btn" href="#">Подробнее</a>
+          <table class="slide__feature">
+            <tr>
+              <th>Длина палки</th>
+              <td>8,5 м</td>
+            </tr>
+            <tr>
+              <th>Вес палки</th>
+              <td>5 кг</td>
+            </tr>
+            <tr>
+              <th>Материал</th>
+              <td>Карбон</td>
+            </tr>
+          </table>
+        </article>
+        <article class="slide slide-2">
+          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
+          <h3 class="slide__title">Худеем правильно!</h3>
+          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы  не проп</p>
+          <a class="slide__btn" href="#">Подробнее</a>
+          <table class="slide__feature">
+            <tr>
+              <th>Длина палки</th>
+              <td>8,5 м</td>
+            </tr>
+            <tr>
+              <th>Вес палки</th>
+              <td>5 кг</td>
+            </tr>
+            <tr>
+              <th>Материал</th>
+              <td>Карбон</td>
+            </tr>
+          </table>
+        </article>
+        <article class="slide slide-3">
+          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
+          <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
+          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <a class="slide__btn" href="#">Подробнее</a>
+          <table class="slide__feature">
+            <tr>
+              <th>Длина палки</th>
+              <td>8,5 м</td>
+            </tr>
+            <tr>
+              <th>Вес палки</th>
+              <td>5 кг</td>
+            </tr>
+            <tr>
+              <th>Материал</th>
+              <td>Карбон</td>
+            </tr>
+          </table>
+        </article>
+      </section>
+      <section class="popular">
+        <h2 class="invisible-heading">Популярные категории</h2>
+        <ul class="popular__list">
+          <li><a href="#">Виртуальная реальность</a></li>
+          <li><a href="#">Моноподы для селфи</a></li>
+          <li><a href="#">Экшн-камеры</a></li>
+          <li><a href="#">Фитнес-браслеты</a></li>
+          <li><a href="#">Умные часы</a></li>
+          <li><a href="#">Квадрокоптеры</a></li>
+        </ul>
+      </section>
+      <section class="services">
+        <h2 class="invisible-header">Особенности магазина</h2>
+        <input id="service01" type="radio" name="services" value="service-1" checked>
+        <input id="service02" type="radio" name="services" value="service-2">
+        <input id="service03" type="radio" name="services" value="service-3">
+        <div class="service service-1">
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+        <div class="service service-2">
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+        <div class="service service-3">
+          <h3>Доставка</h3>
+          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+        </div>
+      </section>
+      <section class="brands">
+        <ul class="brands__list">
+          <li><a href="#"><img src="img/dji.png" width="260" height="100" alt="DJI"></a></li>
+          <li><a href="#"><img src="img/spg.png" width="260" height="100" alt="SPGadgets"></a></li>
+          <li><a href="#"><img src="img/gopro.png" width="260" height="100" alt="GoPro"></a></li>
+          <li><a href="#"><img src="img/vive.png" width="260" height="100" alt="VIVE"></a></li>
+        </ul>
+      </section>
+      <section class="about">
+        <h2>О нас</h2>
+        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+        <ul>
+	        <li>Деловые Линии</li>
+	        <li>Автотрейдинг</li>
+          <li>ЖелДорЭкспедиция</li>
+        </ul>
+        <a class="btn about__btn" href="#">Подробнее о нас</a>
+      </section>
+      <section class="contacts">
+        <h2>Контакты</h2>
+        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+        <img class="contacts__map" src="img/map.png" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+        <a class="btn contacts__btn" href="#">Напишите нам</a>
+      </section>
+    </main>
+    <footer>
+      <section class="footer">
+        <b class="logo logo--main logo--footer">DEVICE</b>
+        <ul class="footer__user">
+          <li><a href="#">Войти</a></li>
+          <li><a href="#">Сравнить</a></li>
+          <li><a href="#">Корзина</a></li>
+        </ul>
+        <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
+        <ul class="footer__menu">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <span class="footer__phone">Тел.: +7 (495) 495-95-95</span>
+        <ul class="footer__social">
+          <li><a class="footer__social--fb" href="#">Facebook</a></li>
+          <li><a class="footer__social--inst" href="#">Instagram</a></li>
+          <li><a class="footer__social--tw" href="#">Twitter</a></li>
+        </ul>
+        <a class="footer_copiright" href="#">HTMLacademy</a>
+      </section>
+    </footer>
   </body>
 </html>
