@@ -6,19 +6,17 @@
   </head>
   <body>
     <header>
-      <a class="logo logo--catalog" href="/">DEVACE</a>
+      <a class="logo logo--catalog" href="/"><img src="img/logo.svg" width="164" height="36" alt="DEVICE"></a>
       <nav class="menu">
         <form class="menu__search">
           <label for="search">Поиск</label>
           <input type="search" id="search" name="search" placeholder="Поиск по сайту">
         </form>
         <ul class="menu__user">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li class="menu__user--exit"><a href="#">Выйти</a></li>
-        </ul>
-        <ul class="menu__card">
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="menu__user--profile" href="#">Валентин Петухов</a></li>
+          <li><a class="menu__user--exit" href="#">Выйти</a></li>
+          <li><a class="menu__user--compare" href="#">Сравнить</a></li>
+          <li><a class="menu__user--cart" href="#">Корзина</a></li>
         </ul>
         <ul class="menu__site">
           <li><a href="#">Каталог товаров</a>
@@ -49,7 +47,7 @@
         <!-- Здесь будет форма -->
       </section>
       <section class="catalog">
-        <h2 class="invisible-heading">Список товаров</h2>
+        <h2 class="visually-hidden">Список товаров</h2>
         <nav class="sort">
           <h3>Сортировка:</h3>
           <ul>
@@ -111,10 +109,10 @@
       <div class="footer">
         <a class="logo logo--main logo--footer" href="#">DEVICE</a>
         <ul class="footer__user">
-          <li><a href="#">Валентин Петухов</a></li>
-          <li><a href="#">Выйти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="footer__user--profile" href="#">Валентин Петухов</a></li>
+          <li><a class="footer__user--exit" href="#">Выйти</a></li>
+          <li><a class="footer__user--compare" href="#">Сравнить</a></li>
+          <li><a class="footer__user--cart" href="#">Корзина</a></li>
         </ul>
         <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
         <ul class="footer__menu">

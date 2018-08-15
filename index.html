@@ -6,18 +6,16 @@
   </head>
   <body>
     <header>
-      <a class="logo logo--main">DEVACE</a>
+      <a class="logo logo--main"><img src="img/logo.svg" width="164" height="36" alt="DEVICE"></a>
       <nav class="menu">
         <form class="menu__search">
           <label for="search">Поиск</label>
           <input type="search" id="search" name="search" placeholder="Поиск по сайту">
         </form>
         <ul class="menu__user">
-          <li><a href="#">Войти</a></li>
-        </ul>
-        <ul class="menu__card">
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="menu__user--singin" href="#">Войти</a></li>
+          <li><a class="menu__user--compare" href="#">Сравнить</a></li>
+          <li><a class="menu__user--cart" href="#">Корзина</a></li>
         </ul>
         <ul class="menu__site">
           <li><a href="#">Каталог товаров</a>
@@ -37,12 +35,17 @@
       </nav>
     </header>
     <main>
-      <h1 class="invisible-header">DEVACE</h1>
+      <h1 class="visually-hidden">DEVACE</h1>
       <section class="slider">
-        <h2 class="invisible-header">Популярные товары</h2>
+        <h2 class="visually-hidden">Популярные товары</h2>
         <input id="slide01" type="radio" name="slider" value="slide-1" checked>
         <input id="slide02" type="radio" name="slider" value="slide-2">
         <input id="slide03" type="radio" name="slider" value="slide-3">
+        <div class="slider__togle">
+          <label for="slide01">01</label>
+          <label for="slide02">02</label>
+          <label for="slide03">03</label>
+        </div>
         <article class="slide slide-1">
           <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
           <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
@@ -64,42 +67,30 @@
           </table>
         </article>
         <article class="slide slide-2">
-          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
+          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Худеем правильно!">
           <h3 class="slide__title">Худеем правильно!</h3>
-          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы  не проп</p>
+          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
           <a class="slide__btn" href="#">Подробнее</a>
           <table class="slide__feature">
             <tr>
-              <th>Длина палки</th>
-              <td>8,5 м</td>
-            </tr>
-            <tr>
-              <th>Вес палки</th>
-              <td>5 кг</td>
-            </tr>
-            <tr>
-              <th>Материал</th>
-              <td>Карбон</td>
+              <th>Без подзарядки</th>
+              <td>48 часов</td>
             </tr>
           </table>
         </article>
         <article class="slide slide-3">
-          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
-          <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
-          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+          <img class="slide__img" src="/img/slide01.png" width="384" height="486" alt="Порхает как бабочка, жалит как пчела!">
+          <h3 class="slide__title">Порхает как бабочка, жалит как пчела!</h3>
+          <p></p>
           <a class="slide__btn" href="#">Подробнее</a>
           <table class="slide__feature">
             <tr>
-              <th>Длина палки</th>
-              <td>8,5 м</td>
+              <th>Дальность полета</th>
+              <td>800 м</td>
             </tr>
             <tr>
-              <th>Вес палки</th>
-              <td>5 кг</td>
-            </tr>
-            <tr>
-              <th>Материал</th>
-              <td>Карбон</td>
+              <th>Радиус поражения</th>
+              <td>50 м</td>
             </tr>
           </table>
         </article>
@@ -116,21 +107,26 @@
         </ul>
       </section>
       <section class="services">
-        <h2 class="invisible-header">Особенности магазина</h2>
+        <h2 class="visually-hidden">Особенности магазина</h2>
         <input id="service01" type="radio" name="services" value="service-1" checked>
         <input id="service02" type="radio" name="services" value="service-2">
         <input id="service03" type="radio" name="services" value="service-3">
+        <div class="services__togle">
+          <label for="service01">Доставка</label>
+          <label for="service02">Гарантия</label>
+          <label for="service03">Кредит</label>
+        </div>
         <div class="service service-1">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
         </div>
         <div class="service service-2">
-          <h3>Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <h3>Гарантия</h3>
+          <p>Если из-за возгорания купленного у нас товара у вас сгорит дом — не переживайте, мы выдадим вам новый. Товар, не дом, конечно же.</p>
         </div>
         <div class="service service-3">
-          <h3>Доставка</h3>
-          <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
+          <h3>Кредит</h3>
+          <p>Залезть в долговую яму стало проще! Кредитные консультанты подберут для вас наиболее выгодные условия кредита. Выгодные для нашего банка, разумеется.</p>
         </div>
       </section>
       <section class="brands">
@@ -146,9 +142,9 @@
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
         <ul>
-	        <li>Деловые Линии</li>
-	        <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
+	        <li><a href="#">Деловые Линии</a></li>
+	        <li><a href="#">Автотрейдинг</a></li>
+          <li><a href="#">ЖелДорЭкспедиция</a></li>
         </ul>
         <a class="btn about__btn" href="#">Подробнее о нас</a>
       </section>
@@ -161,11 +157,11 @@
     </main>
     <footer>
       <div class="footer">
-        <a class="logo logo--main logo--footer" href="#">DEVICE</a>
+        <a class="logo logo--main logo--footer" href="#"><img src="img/logo.svg" width="164" height="36" alt="DEVICE"></a>
         <ul class="footer__user">
-          <li><a href="#">Войти</a></li>
-          <li><a href="#">Сравнить</a></li>
-          <li><a href="#">Корзина</a></li>
+          <li><a class="footer__user--singin" href="#">Войти</a></li>
+          <li><a class="footer__user--compare" href="#">Сравнить</a></li>
+          <li><a class="footer__user-cart" href="#">Корзина</a></li>
         </ul>
         <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
         <ul class="footer__menu">
@@ -182,5 +178,15 @@
         <a class="footer_copiright" href="#">HTMLacademy</a>
       </div>
     </footer>
+    <section class="modal modal--writeus">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <a class="modal__close">Закрыть</a>
+      <!-- Здесь будет форма -->
+    </section>
+    <section class="modal modal--map">
+      <h2 class="visually-hidden">Наш адрес</h2>
+      <a class="modal__close">Закрыть</a>
+      <img class="modal__map-img" src="img/map-modal.png" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
+    </section>
   </body>
 </html>
