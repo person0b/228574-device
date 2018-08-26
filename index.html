@@ -8,9 +8,10 @@
     <header>
       <a class="logo logo--main"><img src="img/logo.svg" width="164" height="36" alt="DEVICE"></a>
       <nav class="menu">
-        <form class="menu__search">
+        <form class="menu__search" method="get" action="https://echo.htmlacademy.ru">
           <label for="search">Поиск</label>
           <input type="search" id="search" name="search" placeholder="Поиск по сайту">
+          <button class="search__btn" type="submit">Найти</button>
         </form>
         <ul class="menu__user">
           <li><a class="menu__user--singin" href="#">Войти</a></li>
@@ -38,13 +39,13 @@
       <h1 class="visually-hidden">DEVACE</h1>
       <section class="slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <input id="slide01" type="radio" name="slider" value="slide-1" checked>
-        <input id="slide02" type="radio" name="slider" value="slide-2">
-        <input id="slide03" type="radio" name="slider" value="slide-3">
-        <div class="slider__togle">
-          <label for="slide01">01</label>
-          <label for="slide02">02</label>
-          <label for="slide03">03</label>
+        <input class="visually-hidden" id="slide01" type="radio" name="slider" value="slide-1" checked>
+        <input class="visually-hidden" id="slide02" type="radio" name="slider" value="slide-2">
+        <input class="visually-hidden" id="slide03" type="radio" name="slider" value="slide-3">
+        <div class="slider__toggle">
+          <label for="slide01"><span class="visually-hidden">Слайд #1</span></label>
+          <label for="slide02"><span class="visually-hidden">Слайд #2</span></label>
+          <label for="slide03"><span class="visually-hidden">Слайд #3</span></label>
         </div>
         <article class="slide slide-1">
           <img class="slide__img" src="img/slide1.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
@@ -108,9 +109,9 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Особенности магазина</h2>
-        <input id="service01" type="radio" name="services" value="service-1" checked>
-        <input id="service02" type="radio" name="services" value="service-2">
-        <input id="service03" type="radio" name="services" value="service-3">
+        <input class="visually-hidden" id="service01" type="radio" name="services" value="service-1" checked>
+        <input class="visually-hidden" id="service02" type="radio" name="services" value="service-2">
+        <input class="visually-hidden" id="service03" type="radio" name="services" value="service-3">
         <div class="services__togle">
           <label for="service01">Доставка</label>
           <label for="service02">Гарантия</label>
@@ -175,18 +176,34 @@
           <li><a class="footer__social--inst" href="#">Instagram</a></li>
           <li><a class="footer__social--tw" href="#">Twitter</a></li>
         </ul>
-        <a class="footer_copiright" href="#">HTMLacademy</a>
+        <a class="footer_copiright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLacademy</a>
       </div>
     </footer>
-    <section class="modal modal--writeus">
+    <section class="modal modal--write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
-      <a class="modal__close">Закрыть</a>
-      <!-- Здесь будет форма -->
+      <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
+        <label class="write-us__label">
+          Ваше имя:
+          <input type="text" name="name" placeholder="Имя Фамилия">
+        </label>
+        <label class="write-us__label">
+          Ваш e-mail:
+          <input type="email" name="email" placeholder="email@example.com">
+        </label>
+        <label class="write-us__label">
+          Текст письма:
+          <textarea name="message">
+            В свободной форме
+          </textarea>
+        </label>
+        <button class="btn write-us__btn" type="submit">Отправить</button>
+      </form>
+      <button class="modal__close" type="button">Закрыть</button>
     </section>
     <section class="modal modal--map">
       <h2 class="visually-hidden">Наш адрес</h2>
-      <a class="modal__close">Закрыть</a>
-      <img class="modal__map-img" src="img/map-modal.jpg" width="960" height="559" alt="г. Москва, ул. Строителей, 15">
+      <button class="modal__close" type="button">Закрыть</button>
+      <img class="modal__map-img" src="img/map-modal.jpg" width="960" height="559" alt="Наш адрес г. Москва, ул. Строителей, 15">
     </section>
   </body>
 </html>
