@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -39,30 +41,31 @@
       <h1 class="visually-hidden">DEVACE</h1>
       <section class="slider">
         <h2 class="visually-hidden">Популярные товары</h2>
-        <input class="visually-hidden" id="slide01" type="radio" name="slider" value="slide-1" checked>
-        <input class="visually-hidden" id="slide02" type="radio" name="slider" value="slide-2">
-        <input class="visually-hidden" id="slide03" type="radio" name="slider" value="slide-3">
-        <div class="slider__toggle">
-          <label for="slide01"><span class="visually-hidden">Слайд #1</span></label>
-          <label for="slide02"><span class="visually-hidden">Слайд #2</span></label>
-          <label for="slide03"><span class="visually-hidden">Слайд #3</span></label>
-        </div>
+        <ul class="slider__switches">
+          <li class="slider__radio">
+            <button class="slider__btn">Первый слайд</button>
+          </li>
+          <li class="slider__radio">
+            <button class="slider__btn">Второй слайд</button>
+          </li>
+          <li class="slider__radio">
+            <button class="slider__btn">Третий слайд</button>
+          </li>
+        </ul>
         <article class="slide slide-1">
           <img class="slide__img" src="img/slide1.png" width="384" height="486" alt="Делай селфи, как Бен Стиллер!">
           <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
           <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="slide__btn" href="#">Подробнее</a>
+          <a class="btn slide__btn" href="#">Подробнее</a>
           <table class="slide__feature">
             <tr>
               <th>Длина палки</th>
-              <td>8,5 м</td>
-            </tr>
-            <tr>
               <th>Вес палки</th>
-              <td>5 кг</td>
+              <th>Материал</th>
             </tr>
             <tr>
-              <th>Материал</th>
+              <td>8,5 м</td>
+              <td>5 кг</td>
               <td>Карбон</td>
             </tr>
           </table>
@@ -71,10 +74,12 @@
           <img class="slide__img" src="img/slide2.png" width="384" height="486" alt="Худеем правильно!">
           <h3 class="slide__title">Худеем правильно!</h3>
           <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <a class="slide__btn" href="#">Подробнее</a>
+          <a class="btn slide__btn" href="#">Подробнее</a>
           <table class="slide__feature">
             <tr>
               <th>Без подзарядки</th>
+            </tr>
+            <tr>
               <td>48 часов</td>
             </tr>
           </table>
@@ -83,14 +88,14 @@
           <img class="slide__img" src="img/slide3.png" width="384" height="486" alt="Порхает как бабочка, жалит как пчела!">
           <h3 class="slide__title">Порхает как бабочка, жалит как пчела!</h3>
           <p></p>
-          <a class="slide__btn" href="#">Подробнее</a>
+          <a class="btn slide__btn" href="#">Подробнее</a>
           <table class="slide__feature">
             <tr>
               <th>Дальность полета</th>
-              <td>800 м</td>
+              <th>Радиус поражения</th>
             </tr>
             <tr>
-              <th>Радиус поражения</th>
+              <td>800 м</td>
               <td>50 м</td>
             </tr>
           </table>
@@ -109,14 +114,17 @@
       </section>
       <section class="services">
         <h2 class="visually-hidden">Особенности магазина</h2>
-        <input class="visually-hidden" id="service01" type="radio" name="services" value="service-1" checked>
-        <input class="visually-hidden" id="service02" type="radio" name="services" value="service-2">
-        <input class="visually-hidden" id="service03" type="radio" name="services" value="service-3">
-        <div class="services__togle">
-          <label for="service01">Доставка</label>
-          <label for="service02">Гарантия</label>
-          <label for="service03">Кредит</label>
-        </div>
+        <ul class="services__switches">
+          <li class="services__radio">
+            <button class="btn services__btn">Доставка</button>
+          </li>
+          <li class="services__radio">
+            <button class="btn services__btn">Гарантия</button>
+          </li>
+          <li class="services__radio">
+            <button class="btn services__btn">Кредит</button>
+          </li>
+        </ul>
         <div class="service service-1">
           <h3>Доставка</h3>
           <p>Мы с удовольствием доставим ваш товар прямо к вашему подъезду совершенно бесплатно! Ведь мы неплохо заработаем, поднимая его на ваш этаж.</p>
@@ -143,41 +151,39 @@
         <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
         <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
         <ul>
-	        <li><a href="#">Деловые Линии</a></li>
-	        <li><a href="#">Автотрейдинг</a></li>
-          <li><a href="#">ЖелДорЭкспедиция</a></li>
+	        <li><a class="about__link" href="#">Деловые Линии</a></li>
+	        <li><a class="about__link" href="#">Автотрейдинг</a></li>
+          <li><a class="about__link" href="#">ЖелДорЭкспедиция</a></li>
         </ul>
         <a class="btn about__btn" href="#">Подробнее о нас</a>
       </section>
       <section class="contacts">
         <h2>Контакты</h2>
         <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img class="contacts__map" src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15">
+        <img class="contacts__map" src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15"><br>
         <a class="btn contacts__btn" href="#">Напишите нам</a>
       </section>
     </main>
-    <footer>
-      <div class="footer">
-        <a class="logo logo--main logo--footer" href="#"><img src="img/logo-footer.svg" width="164" height="36" alt="DEVICE"></a>
-        <ul class="footer__user">
-          <li><a class="footer__user--singin" href="#">Войти</a></li>
-          <li><a class="footer__user--compare" href="#">Сравнить</a></li>
-          <li><a class="footer__user-cart" href="#">Корзина</a></li>
-        </ul>
-        <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
-        <ul class="footer__menu">
-          <li><a href="#">Доставка</a></li>
-          <li><a href="#">Гарантия</a></li>
-          <li><a href="#">Контакты</a></li>
-        </ul>
-        <span class="footer__phone">Тел.: +7 (495) 495-95-95</span>
-        <ul class="footer__social">
-          <li><a class="footer__social--fb" href="#">Facebook</a></li>
-          <li><a class="footer__social--inst" href="#">Instagram</a></li>
-          <li><a class="footer__social--tw" href="#">Twitter</a></li>
-        </ul>
-        <a class="footer_copiright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLacademy</a>
-      </div>
+    <footer class="footer">
+      <a class="logo logo--main logo--footer" href="#"><img src="img/logo-footer.svg" width="164" height="36" alt="DEVICE"></a>
+      <ul class="footer__user">
+        <li><a class="footer__user--singin" href="#">Войти</a></li>
+        <li><a class="footer__user--compare" href="#">Сравнить</a></li>
+        <li><a class="footer__user-cart" href="#">Корзина</a></li>
+      </ul>
+      <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
+      <ul class="footer__menu">
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Гарантия</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <span class="footer__phone">Тел.: +7 (495) 495-95-95</span>
+      <ul class="footer__social">
+        <li><a class="footer__social--fb" href="#">Facebook</a></li>
+        <li><a class="footer__social--inst" href="#">Instagram</a></li>
+        <li><a class="footer__social--tw" href="#">Twitter</a></li>
+      </ul>
+      <a class="footer_copiright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLacademy</a>
     </footer>
     <section class="modal modal--write-us">
       <h2 class="visually-hidden">Напишите нам</h2>

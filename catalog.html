@@ -3,6 +3,8 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Девайс - Каталог</title>
+    <link href="css/normalize.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
     <header>
@@ -37,24 +39,24 @@
       </nav>
     </header>
     <main>
-      <h1>Моноподы для селфи</h1>
+      <h1 class="catalog__title">Моноподы для селфи</h1>
       <ul class="bredcrumbs">
         <li><a href="#">Главная</a></li>
         <li><a href="#">Каталог товаров</a></li>
-        <li class="bredcrumbs__item--last">Моноподы для селфи</li>
+        <li>Моноподы для селфи</li>
       </ul>
       <section class="filters">
         <h2 class="filters__title">Фильтр:</h2>
         <form class="filter" method="get" action="https://echo.htmlacademy.ru">
-          <fieldset>
-            <legend>Стоимость</legend>
+          <fieldset class="filter__field">
+            <legend class="filter__title">Стоимость</legend>
             <div class="filter__range">
               <span class="filter__range--min">от 0</span>
               <span class="filter__range--max">до 5000</span>
             </div>
           </fieldset>
-          <fieldset>
-            <legend>Цвет</legend>
+          <fieldset class="filter__field">
+            <legend class="filter__title">Цвет</legend>
             <ul>
               <li class="filter__option">
                 <input class="visually-hidden filter__input filter__input--checkbox" type="checkbox" name="black" id="color-black" checked>
@@ -78,8 +80,8 @@
               </li>
             </ul>
           </fieldset>
-          <fieldset>
-            <legend>Bluetooth</legend>
+          <fieldset class="filter__field">
+            <legend class="filter__title">Bluetooth</legend>
             <ul>
               <li class="filter__option">
                 <input class="visually-hidden filter__input filter__input--radio" type="radio" name="bluetooth" value="on" id="bluetooth-on" checked>
@@ -99,11 +101,11 @@
         <nav class="sort">
           <h3>Сортировка:</h3>
           <ul>
-            <li class="sort__item--current"><a>По цене</a></li>
-            <li><a href="#">По типу</a></li>
-            <li><a herf="#">По популярности</a></li>
-            <li class="sort__updown sort__updown--up"><a href="#">Поубыванию</a></li>
-            <li class="sort__updown sort__updown--down sort__updown--current"><a href="#">Повозрастанию</a></li>
+            <li class="sort__item sort__item--current"><a href="#">По цене</a></li>
+            <li class="sort__item"><a href="#">По типу</a></li>
+            <li class="sort__item"><a href="#">По популярности</a></li>
+            <li class="sort__item sort__updown sort__updown--up"><a href="#">Поубыванию</a></li>
+            <li class="sort__item sort__updown sort__updown--down sort__item--current"><a href="#">Повозрастанию</a></li>
           </ul>
         </nav>
         <ul class="catalog__list">
@@ -112,8 +114,8 @@
             <img class="catalog__img" src="img/item1.jpg" width="360" height="380" alt="Любительская селфи-палка">
             <span class="catalog__price">500 руб.</span>
             <div class="catalog__actions">
-              <button class="btn catalog__card" type="button">В корзину</button>
-              <button class="catalog__compare" type="button">Добавить к сравнению</button>
+              <a class="btn catalog__card" href="#">В корзину</a>
+              <a class="catalog__compare" href="#">Добавить к сравнению</a>
             </div>
           </li>
           <li class="catalog__item">
@@ -121,8 +123,8 @@
             <img class="catalog__img" src="img/item2.jpg" width="360" height="380" alt="Профессиональная селфи-палка">
             <span class="catalog__price">1500 руб.</span>
             <div class="catalog__actions">
-              <button class="btn catalog__card" type="button">В корзину</button>
-              <button class="catalog__compare" type="button">Добавить к сравнению</button>
+              <a class="btn catalog__card" href="#">В корзину</a>
+              <a class="catalog__compare" href="#">Добавить к сравнению</a>
             </div>
           </li>
           <li class="catalog__item">
@@ -130,8 +132,8 @@
             <img class="catalog__img" src="img/item3.jpg" width="360" height="380" alt="Непотопляемая селфи-палка">
             <span class="catalog__price">2500 руб.</span>
             <div class="catalog__actions">
-              <button class="btn catalog__card" type="button">В корзину</button>
-              <button class="catalog__compare" type="button">Добавить к сравнению</button>
+              <a class="btn catalog__card" href="#">В корзину</a>
+              <a class="catalog__compare" href="#">Добавить к сравнению</a>
             </div>
           </li>
           <li class="catalog__item catalog__item--new">
@@ -139,16 +141,16 @@
             <img class="catalog__img" src="img/item4.jpg" width="360" height="380" alt="Селфи-палка «Следуй за мной»">
             <span class="catalog__price">4900 руб.</span>
             <div class="catalog__actions">
-              <button class="btn catalog__card" type="button">В корзину</button>
-              <button class="catalog__compare" type="button">Добавить к сравнению</button>
+              <a class="btn catalog__card" href="#">В корзину</a>
+              <a class="catalog__compare" href="#">Добавить к сравнению</a>
             </div>
           </li>
         </ul>
         <ul class="paginator">
           <li class="paginator__item paginator__item--prev"><a href="#">Назад</a></li>
-          <li class="paginator__item paginator__item--current"><a>1</a></li>
-          <li class="paginator__item"><a herf="#">2</a></li>
-          <li class="paginator__item"><a herf="#">3</a></li>
+          <li class="paginator__item paginator__item--current"><a href="#">1</a></li>
+          <li class="paginator__item"><a href="#">2</a></li>
+          <li class="paginator__item"><a href="#">3</a></li>
           <li class="paginator__item paginator__item--next"><a href="#">Вперед</a></li>
         </ul>
       </section>
