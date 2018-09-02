@@ -38,9 +38,17 @@
 /*                              MAIN STYLES                                   */
 /* -------------------------------------------------------------------------- */
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
+  min-width: 1200px;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 
   font-family: 'Open Sans', 'Arial', sans-serif;
   font-style: normal;
@@ -106,10 +114,39 @@ a {
 }
 
 /* -------------------------------------------------------------------------- */
-/*                                   MENU                                     */
+/*                                  HEADER                                    */
 /* -------------------------------------------------------------------------- */
 
+.header {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 60px;
+  padding: 0 20px;
+
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 1160px;
+  padding: 20px 60px 0;
+}
+
+.menu {
+  display: flex;
+  width: 1160px;
+  padding: 0 60px;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.menu__search {
+  width: 500px;
+}
+
 .menu__user {
+  width: 500px;
   padding: 0;
 
   list-style: none;
@@ -133,6 +170,7 @@ a {
 }
 
 .menu__site {
+  width: 1040px;
   padding: 0;
 
   list-style: none;
@@ -183,6 +221,21 @@ a {
 /*                                 SLIDER                                     */
 /* -------------------------------------------------------------------------- */
 
+.slider {
+  width: 1160px;
+  margin: 0 auto;
+}
+
+.slide {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slide__info {
+  width: 500px;
+  margin-right: 60px;
+}
+
 .slide__title {
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: bold;
@@ -216,13 +269,24 @@ a {
 /*                                 POPULAR                                    */
 /* -------------------------------------------------------------------------- */
 
+.popular {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 80px;
+  padding: 0 40px;
+}
+
 .popular__list {
+  display: flex;
   padding: 0;
+
+  justify-content: space-between;
 
   list-style: none;
 }
 
 .popular__list li {
+  width: 160px;
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -242,10 +306,25 @@ a {
 /*                                  SERVICES                                  */
 /* -------------------------------------------------------------------------- */
 
+.services {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 180px;
+  padding: 0 20px;
+
+  justify-content: space-between;
+}
+
 .services__switches {
+  width: 280px;
   padding: 0;
 
   list-style: none;
+}
+
+.service {
+  width: 760px;
 }
 
 .service h3 {
@@ -262,15 +341,46 @@ a {
 /*                                 BRANDS                                     */
 /* -------------------------------------------------------------------------- */
 
+.brands {
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  padding: 0 20px;
+}
+
 .brands__list {
+  display: flex;
   padding: 0;
 
+  justify-content: space-between;
+
   list-style: none;
+}
+
+.brands__list li {
+  width: 260px;
+
+  text-align: center;
 }
 
 /* -------------------------------------------------------------------------- */
 /*                             ABOUT & CONTACTS                               */
 /* -------------------------------------------------------------------------- */
+
+.about-contacts__wrapper {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 90px;
+  padding: 0 20px;
+
+  justify-content: space-between;
+}
+
+.about,
+.contacts {
+  width: 560px;
+}
 
 .about h2,
 .contacts h2 {
@@ -320,7 +430,21 @@ a {
 /*                                 CATALOG                                    */
 /* -------------------------------------------------------------------------- */
 
+.main__catalog {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .catalog__title {
+  width: 1040px;
+  margin: 0 60px;
+  margin-bottom: 30px;
+
   font-family: 'Gilroy', 'Arial', sans-serif;
   font-weight: bold;
   font-size: 47.5px;
@@ -331,6 +455,9 @@ a {
 }
 
 .bredcrumbs {
+  width: 1040px;
+  margin: 0 60px;
+  margin-bottom: 50px;
   padding: 0;
 
   list-style: none;
@@ -360,6 +487,11 @@ a {
 /* -------------------------------------------------------------------------- */
 /*                                 FILTERS                                    */
 /* -------------------------------------------------------------------------- */
+
+.filters {
+  width: 330px;
+  padding: 0 60px 0 70px;
+}
 
 .filters__title {
   font-family: 'Gilroy', 'Arial', sans-serif;
@@ -418,8 +550,25 @@ a {
 }
 
 /* -------------------------------------------------------------------------- */
+/*                                  CATALOG                                   */
+/* -------------------------------------------------------------------------- */
+
+.catalog {
+  display: flex;
+  width: 830px;
+  padding-left: 70px;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* -------------------------------------------------------------------------- */
 /*                                   SORT                                     */
 /* -------------------------------------------------------------------------- */
+
+.sort {
+  width: 760px;
+}
 
 .sort ul {
   padding: 0;
@@ -457,9 +606,18 @@ a {
 /* -------------------------------------------------------------------------- */
 
 .catalog__list {
+  display: flex;
+  width: 760px;
   padding: 0;
 
+  flex-wrap: wrap;
+  justify-content: space-between;
+
   list-style: none;
+}
+
+.catalog__item {
+  width: 360px;
 }
 
 .catalog__item-link {
@@ -513,6 +671,7 @@ a {
 /* -------------------------------------------------------------------------- */
 
 .paginator {
+  width: 760px;
   padding: 0;
 
   list-style: none;
@@ -577,7 +736,23 @@ a {
   color: #ffffff;
 }
 
+.footer__wrapper {
+  display: flex;
+  width: 1200px;
+  margin: 0 auto;
+  padding: 60px 20px;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.logo--footer {
+  width: 560px;
+  padding: 0;
+}
+
 .footer__user {
+  width: 560px;
   padding: 0;
 
   list-style: none;
@@ -596,7 +771,12 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.footer__adress {
+  width: 260px;
+}
+
 .footer__menu {
+  width: 560px;
   padding: 0;
 
   list-style: none;
@@ -625,7 +805,18 @@ a {
   color: rgba(255, 255, 255, 0.3);
 }
 
+.footer__phone {
+  width: 260px;
+
+  text-align: right;
+}
+
+.footer__line {
+  width: 160px;
+}
+
 .footer__social {
+  width: 760px;
   padding: 0;
 
   list-style: none;
@@ -645,6 +836,7 @@ a {
 }
 
 .footer_copiright {
+  width: 160px;
   color: #ffc600;
 }
 

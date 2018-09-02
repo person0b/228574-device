@@ -7,7 +7,7 @@
     <link href="css/styles.css" rel="stylesheet">
   </head>
   <body>
-    <header>
+    <header class="header">
       <a class="logo logo--main"><img src="img/logo.svg" width="164" height="36" alt="DEVICE"></a>
       <nav class="menu">
         <form class="menu__search" method="get" action="https://echo.htmlacademy.ru">
@@ -54,51 +54,57 @@
         </ul>
         <article class="slide slide-1">
           <img class="slide__img" src="img/slide1.png" width="560" height="500" alt="Делай селфи, как Бен Стиллер!">
-          <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
-          <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
-          <a class="btn slide__btn" href="#">Подробнее</a>
-          <table class="slide__feature">
-            <tr>
-              <th>Длина палки</th>
-              <th>Вес палки</th>
-              <th>Материал</th>
-            </tr>
-            <tr>
-              <td>8,5 м</td>
-              <td>5 кг</td>
-              <td>Карбон</td>
-            </tr>
-          </table>
+          <div class="slide__info">
+            <h3 class="slide__title">Делай селфи, как Бен Стиллер!</h3>
+            <p>Самая длинная палка для селфи доступна в нашем магазине. Восемь (Восемь, Карл!) метров длиной и весом всего 5 килограмм.</p>
+            <a class="btn slide__btn" href="#">Подробнее</a>
+            <table class="slide__feature">
+              <tr>
+                <th>Длина палки</th>
+                <th>Вес палки</th>
+                <th>Материал</th>
+              </tr>
+              <tr>
+                <td>8,5 м</td>
+                <td>5 кг</td>
+                <td>Карбон</td>
+              </tr>
+            </table>
+          </div>
         </article>
         <article class="slide slide-2">
           <img class="slide__img" src="img/slide2.png" width="560" height="500" alt="Худеем правильно!">
-          <h3 class="slide__title">Худеем правильно!</h3>
-          <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
-          <a class="btn slide__btn" href="#">Подробнее</a>
-          <table class="slide__feature">
-            <tr>
-              <th>Без подзарядки</th>
-            </tr>
-            <tr>
-              <td>48 часов</td>
-            </tr>
-          </table>
+          <div class="slide__info">
+            <h3 class="slide__title">Худеем правильно!</h3>
+            <p>Мотивирующие фитнес-браслеты помогут найти в себе силы не пропускать занятия и соблюдать диету.</p>
+            <a class="btn slide__btn" href="#">Подробнее</a>
+            <table class="slide__feature">
+              <tr>
+                <th>Без подзарядки</th>
+              </tr>
+              <tr>
+                <td>48 часов</td>
+              </tr>
+            </table>
+          </div>
         </article>
         <article class="slide slide-3">
           <img class="slide__img" src="img/slide3.png" width="560" height="500" alt="Порхает как бабочка, жалит как пчела!">
-          <h3 class="slide__title">Порхает как бабочка, жалит как пчела!</h3>
-          <p></p>
-          <a class="btn slide__btn" href="#">Подробнее</a>
-          <table class="slide__feature">
-            <tr>
-              <th>Дальность полета</th>
-              <th>Радиус поражения</th>
-            </tr>
-            <tr>
-              <td>800 м</td>
-              <td>50 м</td>
-            </tr>
-          </table>
+          <div class="slide__info">
+            <h3 class="slide__title">Порхает как бабочка, жалит как пчела!</h3>
+            <p></p>
+            <a class="btn slide__btn" href="#">Подробнее</a>
+            <table class="slide__feature">
+              <tr>
+                <th>Дальность полета</th>
+                <th>Радиус поражения</th>
+              </tr>
+              <tr>
+                <td>800 м</td>
+                <td>50 м</td>
+              </tr>
+            </table>
+          </div>
         </article>
       </section>
       <section class="popular">
@@ -146,44 +152,49 @@
           <li><a href="#"><img src="img/logo4.jpg" width="260" height="100" alt="VIVE"></a></li>
         </ul>
       </section>
-      <section class="about">
-        <h2>О нас</h2>
-        <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
-        <ul>
-	        <li><a class="about__link" href="#">Деловые Линии</a></li>
-	        <li><a class="about__link" href="#">Автотрейдинг</a></li>
-          <li><a class="about__link" href="#">ЖелДорЭкспедиция</a></li>
-        </ul>
-        <a class="btn about__btn" href="#">Подробнее о нас</a>
-      </section>
-      <section class="contacts">
-        <h2>Контакты</h2>
-        <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
-        <img class="contacts__map" src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15"><br>
-        <a class="btn contacts__btn" href="#">Напишите нам</a>
-      </section>
+      <div class="about-contacts__wrapper">
+        <section class="about">
+          <h2>О нас</h2>
+          <p>Огромный выбор гаджетов не оставит равнодушным гика, который есть в каждом из нас.</p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России! DEVICE работает со многими транспортными компаниями:</p>
+          <ul>
+  	        <li><a class="about__link" href="#">Деловые Линии</a></li>
+  	        <li><a class="about__link" href="#">Автотрейдинг</a></li>
+            <li><a class="about__link" href="#">ЖелДорЭкспедиция</a></li>
+          </ul>
+          <a class="btn about__btn" href="#">Подробнее о нас</a>
+        </section>
+        <section class="contacts">
+          <h2>Контакты</h2>
+          <p>Вы можете забрать товар сами, заехав в наш офис. Заодно, вы сможете проверить работоспособность покупки. Всякое бывает.</p>
+          <img class="contacts__map" src="img/map.jpg" width="560" height="222" alt="г. Москва, ул. Строителей, 15"><br>
+          <a class="btn contacts__btn" href="#">Напишите нам</a>
+        </section>
+      </div>
     </main>
     <footer class="footer">
-      <a class="logo logo--main logo--footer" href="#"><img src="img/logo-footer.svg" width="164" height="36" alt="DEVICE"></a>
-      <ul class="footer__user">
-        <li><a class="footer__user--singin" href="#">Войти</a></li>
-        <li><a class="footer__user--compare" href="#">Сравнить</a></li>
-        <li><a class="footer__user-cart" href="#">Корзина</a></li>
-      </ul>
-      <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
-      <ul class="footer__menu">
-        <li><a href="#">Доставка</a></li>
-        <li><a href="#">Гарантия</a></li>
-        <li><a href="#">Контакты</a></li>
-      </ul>
-      <span class="footer__phone">Тел.: +7 (495) 495-95-95</span>
-      <ul class="footer__social">
-        <li><a class="footer__social--fb" href="#">Facebook</a></li>
-        <li><a class="footer__social--inst" href="#">Instagram</a></li>
-        <li><a class="footer__social--tw" href="#">Twitter</a></li>
-      </ul>
-      <a class="footer_copiright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLacademy</a>
+      <div class="footer__wrapper">
+        <a class="logo logo--main logo--footer" href="#"><img src="img/logo-footer.svg" width="164" height="36" alt="DEVICE"></a>
+        <ul class="footer__user">
+          <li><a class="footer__user--singin" href="#">Войти</a></li>
+          <li><a class="footer__user--compare" href="#">Сравнить</a></li>
+          <li><a class="footer__user-cart" href="#">Корзина</a></li>
+        </ul>
+        <span class="footer__adress">г. Москва, ул. Строителей, 15</span>
+        <ul class="footer__menu">
+          <li><a href="#">Доставка</a></li>
+          <li><a href="#">Гарантия</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+        <span class="footer__phone">Тел.: +7 (495) 495-95-95</span>
+        <div class="footer__line"></div>
+        <ul class="footer__social">
+          <li><a class="footer__social--fb" href="#">Facebook</a></li>
+          <li><a class="footer__social--inst" href="#">Instagram</a></li>
+          <li><a class="footer__social--tw" href="#">Twitter</a></li>
+        </ul>
+        <a class="footer_copiright" href="https://htmlacademy.ru/intensive/htmlcss">HTMLacademy</a>
+      </div>
     </footer>
     <section class="modal modal--write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
