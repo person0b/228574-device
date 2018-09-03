@@ -166,6 +166,10 @@ input[type="radio"].visually-hidden {
   opacity: 0.3;
 }
 
+.logo--main {
+  pointer-events: none;
+}
+
 .menu {
   display: flex;
   width: 1160px;
@@ -687,6 +691,8 @@ input[type="radio"].visually-hidden {
 .popular__list a {
   position: relative;
 
+  display: block;
+
   color: #000000;
 }
 
@@ -711,7 +717,8 @@ input[type="radio"].visually-hidden {
   content: '';
 
   position: absolute;
-  top: 18px;
+  /* top: 18px; */
+  top: 0;
   left: 0;
 
   display: block;
@@ -720,32 +727,38 @@ input[type="radio"].visually-hidden {
 }
 
 .popular__vr::after {
-  background: url('../img/popular-1.svg') no-repeat;
+  background-image: url('../img/popular-1.svg');
+  background-repeat: no-repeat;
   background-position: 32px 52px;
 }
 
 .popular__selfi::after {
-  background: url('../img/popular-2.svg') no-repeat;
+  background-image: url('../img/popular-2.svg');
+  background-repeat: no-repeat;
   background-position: 39px 40px;
 }
 
 .popular__cam::after {
-  background: url('../img/popular-3.svg') no-repeat;
+  background-image: url('../img/popular-3.svg');
+  background-repeat: no-repeat;
   background-position: 50px 38px;
 }
 
 .popular__fitnes::after {
-  background: url('../img/popular-4.svg') no-repeat;
+  background-image: url('../img/popular-4.svg');
+  background-repeat: no-repeat;
   background-position: 29px 50px;
 }
 
 .popular__watch::after {
-  background: url('../img/popular-5.svg') no-repeat;
+  background-image: url('../img/popular-5.svg');
+  background-repeat: no-repeat;
   background-position: 56px 32px;
 }
 
 .popular__quad::after {
-  background: url('../img/popular-6.svg') no-repeat;
+  background-image: url('../img/popular-6.svg');
+  background-repeat: no-repeat;
   background-position: 15px 49px;
 }
 
