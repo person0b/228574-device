@@ -209,20 +209,18 @@
     <section class="modal modal--write-us">
       <h2 class="visually-hidden">Напишите нам</h2>
       <form class="write-us__form" method="post" action="https://echo.htmlacademy.ru">
-        <label class="write-us__label">
-          Ваше имя:
-          <input type="text" name="name" placeholder="Имя Фамилия">
-        </label>
-        <label class="write-us__label">
-          Ваш e-mail:
-          <input type="email" name="email" placeholder="email@example.com">
-        </label>
-        <label class="write-us__label">
-          Текст письма:
-          <textarea name="message">
-            В свободной форме
-          </textarea>
-        </label>
+        <p class="write-us__field">
+          <label for="write-name">Ваше имя:</label>
+          <input type="text" id="write-name" name="name" placeholder="Имя Фамилия">
+        </p>
+        <p class="write-us__field">
+          <label for="write-email">Ваш e-mail:</label>
+          <input type="email" id="write-email" name="email" placeholder="email@example.com">
+        </p>
+        <p class="write-us__field write-us__field--textarea">
+          <label for="write-message">Текст письма:</label>
+          <textarea id="write-message" name="message">В свободной форме</textarea>
+        </p>
         <button class="btn write-us__btn" type="submit">Отправить</button>
       </form>
       <button class="modal__close" type="button">Закрыть</button>

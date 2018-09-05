@@ -227,6 +227,7 @@ input[type="radio"].visually-hidden {
 .search__input:focus {
   color: #000000;
   border-bottom: 2px solid #000000;
+  outline: none;
 }
 
 .search__btn {
@@ -1084,7 +1085,158 @@ input[type="radio"].visually-hidden {
 /* -------------------------------------------------------------------------- */
 
 .modal {
+  position: fixed;
+  left: 50%;
+  top: 120px;
+  z-index: 10;
+
   display: none;
+  width: 960px;
+  margin-left: -480px;
+
+  background: #ffffff;
+  box-shadow: 0 10px 20px rgba(4, 6, 6, 0.2);
+}
+
+.modal--map {
+  top: 50%;
+
+  height: 559px;
+  margin-top: -300px;
+}
+
+.modal--open {
+  display: block;
+}
+
+.modal__close {
+  position: absolute;
+  top: 22px;
+  right: 22px;
+
+  width: 55px;
+  height: 55px;
+
+  font-size: 0;
+
+  background: #f0c52e;
+  border: none;
+  border-radius: 27.5px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.modal__close::after {
+  content: '';
+
+  position: absolute;
+  top: 25px;
+  right: 12px;
+
+  display: block;
+  width: 30px;
+  height: 2px;
+
+  background: #ffffff;
+
+  transform: rotate(45deg);
+}
+
+.modal__close::before {
+  content: '';
+
+  position: absolute;
+  top: 25px;
+  right: 12px;
+
+  display: block;
+  width: 30px;
+  height: 2px;
+
+  background: #ffffff;
+
+  transform: rotate(-45deg);
+}
+
+.modal__close:hover,
+.modal__close:focus {
+  opacity: 1;
+}
+
+.modal__close:active {
+  opacity: 0.3;
+}
+
+.modal--write-us {
+  padding: 80px 100px;
+}
+
+.write-us__form {
+  display: flex;
+
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.write-us__field {
+  width: 360px;
+  margin-bottom: 26px;
+
+  flex-shrink: 0;
+}
+
+.write-us__field--textarea {
+  width: 760px;
+}
+
+.write-us__field > label {
+  margin-bottom: 13px;
+  font-family: 'Gilroy', 'Arial', sans-serif;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 24px;
+
+  color: #000000;
+}
+
+.write-us__field > input,
+.write-us__field > textarea {
+  width: 100%;
+  padding: 13.5px 17px;
+
+  font-size: 14px;
+  line-height: 17px;
+
+  color: rgba(70, 70, 70, 0.4);
+  background: rgba(229, 229, 229, 0.5);
+  border: 3px solid transparent;
+}
+
+.write-us__field > textarea {
+  height: 156px;
+}
+
+.write-us__field > input:hover,
+.write-us__field > textarea:hover {
+  background: rgba(229, 229, 229, 0.8);
+}
+
+.write-us__field > input:focus,
+.write-us__field > textarea:focus {
+  color: #464646;
+  background: #ffffff;
+  border-color: #f0c52e;
+  outline: none;
+}
+
+.write-us__field > input:invalid {
+  background: #edb5b5;
+  outline: none;
+  box-shadow: none;
+}
+
+write-us__btn {
+  width: 200px;
 }
 
 /* -------------------------------------------------------------------------- */
