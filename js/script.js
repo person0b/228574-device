@@ -1,38 +1,38 @@
 // SLIDER
 
-var sliderBtn1 = document.querySelector('.slider__radio-1');
-var sliderBtn2 = document.querySelector('.slider__radio-2');
-var sliderBtn3 = document.querySelector('.slider__radio-3');
+var sliderBtn1 = document.querySelector('.slider__radio--1');
+var sliderBtn2 = document.querySelector('.slider__radio--2');
+var sliderBtn3 = document.querySelector('.slider__radio--3');
 
-var slide1 = document.querySelector('.slide-1');
-var slide2 = document.querySelector('.slide-2');
-var slide3 = document.querySelector('.slide-3');
+var slide1 = document.querySelector('.slide--1');
+var slide2 = document.querySelector('.slide--2');
+var slide3 = document.querySelector('.slide--3');
 
-sliderBtn1.addEventListener('click', function (evt) {
+sliderBtn1.addEventListener('click', function () {
   sliderBtn1.classList.add('slider__radio--active');
   sliderBtn2.classList.remove('slider__radio--active');
   sliderBtn3.classList.remove('slider__radio--active');
 
-  slide2.classList.remove('slide__current');
-  slide3.classList.remove('slide__current');
+  slide2.classList.remove('slide--current');
+  slide3.classList.remove('slide--current');
 });
 
-sliderBtn2.addEventListener('click', function (evt) {
+sliderBtn2.addEventListener('click', function () {
   sliderBtn1.classList.remove('slider__radio--active');
   sliderBtn2.classList.add('slider__radio--active');
   sliderBtn3.classList.remove('slider__radio--active');
 
-  slide2.classList.add('slide__current');
-  slide3.classList.remove('slide__current');
+  slide2.classList.add('slide--current');
+  slide3.classList.remove('slide--current');
 });
 
-sliderBtn3.addEventListener('click', function (evt) {
+sliderBtn3.addEventListener('click', function () {
   sliderBtn1.classList.remove('slider__radio--active');
   sliderBtn2.classList.remove('slider__radio--active');
   sliderBtn3.classList.add('slider__radio--active');
 
-  slide2.classList.remove('slide__current');
-  slide3.classList.add('slide__current');
+  slide2.classList.remove('slide--current');
+  slide3.classList.add('slide--current');
 });
 
 // POPULAR
@@ -41,9 +41,9 @@ var serviceBtn1 = document.querySelector('.services__btn1');
 var serviceBtn2 = document.querySelector('.services__btn2');
 var serviceBtn3 = document.querySelector('.services__btn3');
 
-var service1 = document.querySelector('.service-1');
-var service2 = document.querySelector('.service-2');
-var service3 = document.querySelector('.service-3');
+var service1 = document.querySelector('.service--1');
+var service2 = document.querySelector('.service--2');
+var service3 = document.querySelector('.service--3');
 
 serviceBtn1.addEventListener('click', function (evt) {
   serviceBtn1.classList.add('services__btn--current');
@@ -74,7 +74,7 @@ serviceBtn3.addEventListener('click', function (evt) {
 
 // WRITE US
 
-var writeUsBtn = document.querySelector('.contacts__btn');
+var writeUsBtn = document.querySelector('.btn--contacts');
 var writeUsModal = document.querySelector('.modal--write-us');
 var closeWriteUsBtn = document.querySelector('.modal__close--write-us');
 
